@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"></meta>
+<meta http-equiv="Content-Type" content="text/html"></meta>
+<title>Anthologies</title>
+</head>
+<body>
+Modificar:
+<form action="#" th:action="@{/edit/{id}(id=${antology.id})}" th:object="${antology}" method="post">
+	<label for="name">ID: </label>
+	<h4>
+		<span th:text="${id}">Name</span>
+	</h4> 
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name">
+    <label for="name">Author</label>
+    <input type="text" th:field="*{author}" id="name">
+    <label for="name">Release Date</label>
+    <input type="text" th:field="*{release}" id="name">
+     <input type="submit" value="Save Anthology">  
+     
+     
+</form>
+
+</body>
+</html>
